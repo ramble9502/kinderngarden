@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.conf.urls import url
 from . import views
 from django.contrib.auth.views import login, logout  # 利用內建的view funciton
@@ -5,7 +6,7 @@ from django.contrib.auth.views import login, logout  # 利用內建的view funci
 #from django.conf import settings
 urlpatterns = [
     url(r'^accounts/login/$', views.user_login, name='login'),
-    url(r'^index/', views.index, name="index"),
+    url(r'^$', views.index, name="index"),
     url(r'^accounts/logout/$', views.logout, name="logout"),
     url(r'^addschoolclass/$', views.addschoolclass, name="addschoolclass"),
     url(r'^deleteschoolclass/(?P<id>\d+)/$',
