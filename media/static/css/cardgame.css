@@ -1,0 +1,213 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    padding-top: 75px;
+    padding-bottom: 65px;
+    background-color: #fff;
+}
+
+html {
+    height: 100%;
+}
+
+
+/******************************************************************************/
+
+
+/* @NAVIGATION */
+
+
+/******************************************************************************/
+
+.navigation {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #333;
+}
+
+.menu {
+    list-style: none;
+    text-align: center;
+}
+
+.menu__item {
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+    max-width: 115px;
+    margin: 0 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: #ddd;
+}
+
+.menu__item--duration {
+    max-width: 160px;
+    text-align: left;
+}
+
+.menu__item:hover {
+    background: #a7a7a7;
+}
+
+.menu__item.is-active {
+    background: #9fbf93;
+}
+
+
+/******************************************************************************/
+
+
+/* @FOOTER */
+
+
+/******************************************************************************/
+
+.page-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    background: #333;
+}
+
+
+/******************************************************************************/
+
+
+/* @PLAYGROUND */
+
+
+/******************************************************************************/
+
+.please-wait {
+    font-size: 70px;
+    display: block;
+    text-align: center;
+}
+
+.playground {
+    display: table;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 80vh;
+    margin: 0 auto;
+}
+
+.playground.game-stop .c-card-flip {
+    cursor: default;
+}
+
+.playground__container {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.playground:before,
+.playground:after {
+    display: table;
+    content: '';
+}
+
+.playground:after {
+    clear: both;
+}
+
+.c-card-flip {
+    float: left;
+    width: 25%;
+    height: 180px;
+    padding: 5px;
+    cursor: pointer;
+    perspective: 1000;
+    -webkit-perspective: 1000;
+}
+
+.c-card-flip__flipper {
+    position: relative;
+    height: 100%;
+    transition: .6s ease-in-out;
+    box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+}
+
+.c-card-flip__front,
+.c-card-flip__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(221, 221, 221, 0.5);
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.c-card-flip__front {
+    transition: all .3s;
+}
+
+.c-card-flip__back {
+    font-size: 50px;
+    font-weight: bold;
+    transition: background 5.5s;
+    transform: rotateY(180deg);
+    text-align: center;
+    background: rgba(221, 221, 221, 1);
+}
+
+.c-card-flip__title {
+    line-height: 165px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.c-card-flip:hover .c-card-flip__front {
+    background: rgba(221, 221, 221, 0.8);
+}
+
+.c-card-flip.is-correct .c-card-flip__flipper,
+.c-card-flip.is-visible .c-card-flip__flipper {
+    transform: rotateY(180deg);
+}
+
+.c-card-flip.is-correct .c-card-flip__back {
+    background: green;
+}
+
+@media screen and (max-width: 800px) {
+    .c-card-flip {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .c-card-flip {
+        width: 100%;
+    }
+}
+
