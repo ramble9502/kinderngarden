@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from firebase import firebase
 
 fb = firebase.FirebaseApplication(
