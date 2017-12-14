@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 
 # Create your views here.
@@ -35,7 +36,7 @@ def user_login(request):
         if user:
             if user.is_active:
                 login(request, user)
-                return HttpResponseRedirect('/index/')
+                return HttpResponseRedirect('/')
             else:
                 return HttpResponse("That's not is_active.")
         else:
@@ -69,7 +70,7 @@ def deleteschoolclass(request, id):
     schoolclass = obj.schoolclass
     fdeleteclass(year, schoolclass)
     obj.delete()
-    return HttpResponseRedirect('/index/')
+    return HttpResponseRedirect('/')
 
 
 @login_required
