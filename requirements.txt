@@ -59,7 +59,7 @@ PyDispatcher==2.0.5
 Pygments==2.2.0
 pyLDAvis==2.1.1
 pyOpenSSL==17.5.0
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pypiwin32==220
 pytest==3.2.3
 python-dateutil==2.6.1
